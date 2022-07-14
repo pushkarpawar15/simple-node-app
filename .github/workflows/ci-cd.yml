@@ -28,8 +28,12 @@ jobs:
         
       - name: go to hashiqube directory
         run: cd /home/pushkar/Desktop/vadelabs/hashiqube
+        
+      - name: list files
+        run: ls -l
       
       - name: vagrant ssh
         run: vagrant ssh
+        
       - name: test1
         run: cd /vagrant/simple-node-app && ls -l
