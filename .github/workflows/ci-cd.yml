@@ -27,6 +27,7 @@ jobs:
         run: waypoint init
         
   deploy:
+    needs: [init]
     runs-on: self-hosted
     steps:     
       - name: waypoint up
