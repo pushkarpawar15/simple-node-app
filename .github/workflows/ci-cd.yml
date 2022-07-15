@@ -17,12 +17,7 @@ on:
 jobs:
   init:
     runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
-      - name: Display the path
-        run: echo $PATH
-        shell: bash
-        
+    steps:    
       - name: waypoint init
         run: waypoint init
         
@@ -31,8 +26,4 @@ jobs:
     runs-on: self-hosted
     steps:     
       - name: waypoint up
-        run: waypoint up
-        
-    environment:
-      name: url
-      url: https://gladly-musical-bonefish.waypoint.run/    
+        run: waypoint up 
