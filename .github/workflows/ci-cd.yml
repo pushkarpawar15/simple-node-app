@@ -25,3 +25,6 @@ jobs:
         
       - name: waypoint init
         run: waypoint init
+        
+      - name: waypoint up
+        run: waypoint up
