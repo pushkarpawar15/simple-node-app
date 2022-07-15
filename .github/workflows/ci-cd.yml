@@ -15,7 +15,7 @@ on:
     branches: ["master"]
     
 jobs:
-  test:
+  init:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -26,5 +26,12 @@ jobs:
       - name: waypoint init
         run: waypoint init
         
+  deploy:
+    runs-on: self-hosted
+    steps:     
       - name: waypoint up
         run: waypoint up
+        
+    environment:
+      name: url
+      url: https://gladly-musical-bonefish.waypoint.run/    
