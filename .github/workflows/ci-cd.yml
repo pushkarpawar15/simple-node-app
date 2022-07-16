@@ -17,7 +17,12 @@ on:
 jobs:
   init:
     runs-on: self-hosted
-    steps:    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Display the path
+        run: echo $PATH
+        shell: bash
+        
       - name: waypoint init
         run: waypoint init
         
